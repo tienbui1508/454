@@ -1,5 +1,5 @@
-﻿using _454Web.Data;
-using _454Web.Models;
+﻿using _454.DataAccess.Data;
+using _454.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _454Web.Controllers
@@ -90,13 +90,13 @@ namespace _454Web.Controllers
             if (obj == null)
             {
                 return NotFound();
-            } else
-            {
-                _db.Categories.Remove(obj);
-                _db.SaveChanges(true);
-                TempData["success"] = "Category deleted successfully";
-                return RedirectToAction("Index");
             }
+
+            _db.Categories.Remove(obj);
+            _db.SaveChanges(true);
+            TempData["success"] = "Category deleted successfully";
+            return RedirectToAction("Index");
+            
             
         }
     }
