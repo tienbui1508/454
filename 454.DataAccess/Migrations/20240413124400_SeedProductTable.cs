@@ -7,45 +7,13 @@
 namespace _454.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class AddProductToDbAndSeedTable : Migration
+    public partial class SeedProductTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropPrimaryKey(
-                name: "PK_Categories",
-                table: "Categories");
-
-            migrationBuilder.RenameTable(
-                name: "Categories",
-                newName: "Category");
-
-            migrationBuilder.AddPrimaryKey(
-                name: "PK_Category",
-                table: "Category",
-                column: "Id");
-
-            migrationBuilder.CreateTable(
-                name: "Product",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ListPrice = table.Column<double>(type: "float", nullable: false),
-                    Price = table.Column<double>(type: "float", nullable: false),
-                    Price5 = table.Column<double>(type: "float", nullable: false),
-                    Price10 = table.Column<double>(type: "float", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Product", x => x.Id);
-                });
-
             migrationBuilder.InsertData(
-                table: "Product",
+                table: "Products",
                 columns: new[] { "Id", "Author", "Description", "ListPrice", "Price", "Price10", "Price5", "Title" },
                 values: new object[,]
                 {
@@ -61,21 +29,35 @@ namespace _454.DataAccess.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Product");
+            migrationBuilder.DeleteData(
+                table: "Products",
+                keyColumn: "Id",
+                keyValue: 1);
 
-            migrationBuilder.DropPrimaryKey(
-                name: "PK_Category",
-                table: "Category");
+            migrationBuilder.DeleteData(
+                table: "Products",
+                keyColumn: "Id",
+                keyValue: 2);
 
-            migrationBuilder.RenameTable(
-                name: "Category",
-                newName: "Categories");
+            migrationBuilder.DeleteData(
+                table: "Products",
+                keyColumn: "Id",
+                keyValue: 3);
 
-            migrationBuilder.AddPrimaryKey(
-                name: "PK_Categories",
-                table: "Categories",
-                column: "Id");
+            migrationBuilder.DeleteData(
+                table: "Products",
+                keyColumn: "Id",
+                keyValue: 4);
+
+            migrationBuilder.DeleteData(
+                table: "Products",
+                keyColumn: "Id",
+                keyValue: 5);
+
+            migrationBuilder.DeleteData(
+                table: "Products",
+                keyColumn: "Id",
+                keyValue: 6);
         }
     }
 }
