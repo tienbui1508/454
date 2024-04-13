@@ -9,8 +9,8 @@
 
   <ItemGroup>
     <PackageReference Include="xunit.extensibility.core" Version="2.7.0" />
-    <PackageReference Include="xunit.extensibility.execution" Version="2.7.0" />
-	  <PackageReference Include="xunit.extensibility.core" Version="2.7.0" />
+    <PackageReference Include="xunit.extensibility.execution" Version="2.7.1" />
+	  <PackageReference Include="xunit.extensibility.core" Version="2.7.1" />
 	  
   </ItemGroup>
 
