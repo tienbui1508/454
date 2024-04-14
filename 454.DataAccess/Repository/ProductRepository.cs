@@ -21,6 +21,8 @@ namespace _454.DataAccess.Repository
         public void Update(Product obj)
         {
            _db.Products.Update(obj);
+            
+            //can do manual mapping here if somethings go wrong or want to add logic
         }
     }
 }
