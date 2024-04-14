@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using _454.DataAccess.Data;
 
@@ -10,9 +11,11 @@ using _454.DataAccess.Data;
 namespace _454.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240414062927_addFKForCategoryProductRelation")]
+    partial class addFKForCategoryProductRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,10 +85,6 @@ namespace _454.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<double>("ListPrice")
                         .HasColumnType("float");
 
@@ -115,7 +114,6 @@ namespace _454.DataAccess.Migrations
                             Author = "Billy Spark",
                             CategoryId = 1,
                             Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                            ImageUrl = "",
                             ListPrice = 99.0,
                             Price = 90.0,
                             Price10 = 80.0,
@@ -128,7 +126,6 @@ namespace _454.DataAccess.Migrations
                             Author = "Nancy Hoover",
                             CategoryId = 1,
                             Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                            ImageUrl = "",
                             ListPrice = 40.0,
                             Price = 30.0,
                             Price10 = 20.0,
@@ -141,7 +138,6 @@ namespace _454.DataAccess.Migrations
                             Author = "Julian Button",
                             CategoryId = 2,
                             Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                            ImageUrl = "",
                             ListPrice = 55.0,
                             Price = 50.0,
                             Price10 = 35.0,
@@ -154,7 +150,6 @@ namespace _454.DataAccess.Migrations
                             Author = "Abby Muscles",
                             CategoryId = 2,
                             Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                            ImageUrl = "",
                             ListPrice = 70.0,
                             Price = 65.0,
                             Price10 = 55.0,
@@ -167,7 +162,6 @@ namespace _454.DataAccess.Migrations
                             Author = "Ron Parker",
                             CategoryId = 3,
                             Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                            ImageUrl = "",
                             ListPrice = 30.0,
                             Price = 27.0,
                             Price10 = 20.0,
@@ -180,7 +174,6 @@ namespace _454.DataAccess.Migrations
                             Author = "Laura Phantom",
                             CategoryId = 3,
                             Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                            ImageUrl = "",
                             ListPrice = 25.0,
                             Price = 23.0,
                             Price10 = 20.0,

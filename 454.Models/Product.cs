@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace _454.Models
 {
@@ -40,5 +42,14 @@ namespace _454.Models
         [DisplayName("Price for 10+")]
         [Range(1, 1000)]
         public Double Price10 { get; set; }
+
+        public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
+        [ValidateNever]
+
+        public Category Category { get; set; }
+        [ValidateNever]
+
+        public string ImageUrl { get; set; }
     }
 }

@@ -33,14 +33,9 @@
                         List Price
                     </th>
                     <th>
-                        Price for 1-4
+                        Category
                     </th>
-                    <th>
-                        Price for 5-9
-                    </th>
-                    <th>
-                        Price for 10+
-                    </th>
+                 
                 </tr>
             </thead>
             <tbody>
@@ -50,9 +45,7 @@
                         <td>@obj.Title</td>
                         <td>@obj.Author</td>
                         <td>@obj.ListPrice</td>
-                        <td>@obj.Price</td>
-                        <td>@obj.Price5</td>
-                        <td>@obj.Price10</td>
+                        <td>@obj.CategoryId</td>
                         <td>
                             <div class="w-75 btn-group" role="group" :>
                                 <a asp-controller="Product" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2">

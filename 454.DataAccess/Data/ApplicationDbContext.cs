@@ -31,7 +31,9 @@ namespace _454.DataAccess.Data
                     ListPrice = 99,
                     Price = 90,
                     Price5 = 85,
-                    Price10 = 80
+                    Price10 = 80,
+                    CategoryId = 1,
+                    ImageUrl = ""
                 },
                 new Product
                 {
@@ -42,7 +44,9 @@ namespace _454.DataAccess.Data
                     ListPrice = 40,
                     Price = 30,
                     Price5 = 25,
-                    Price10 = 20
+                    Price10 = 20,
+                    CategoryId = 1,
+                    ImageUrl = ""
                 },
                 new Product
                 {
@@ -53,7 +57,9 @@ namespace _454.DataAccess.Data
                     ListPrice = 55,
                     Price = 50,
                     Price5 = 40,
-                    Price10 = 35
+                    Price10 = 35,
+                    CategoryId = 2,
+                    ImageUrl = ""
                 },
                 new Product
                 {
@@ -64,7 +70,9 @@ namespace _454.DataAccess.Data
                     ListPrice = 70,
                     Price = 65,
                     Price5 = 60,
-                    Price10 = 55
+                    Price10 = 55,
+                    CategoryId = 2,
+                    ImageUrl = ""
                 },
                 new Product
                 {
@@ -75,7 +83,9 @@ namespace _454.DataAccess.Data
                     ListPrice = 30,
                     Price = 27,
                     Price5 = 25,
-                    Price10 = 20
+                    Price10 = 20,
+                    CategoryId = 3,
+                    ImageUrl = ""
                 },
                 new Product
                 {
@@ -86,7 +96,9 @@ namespace _454.DataAccess.Data
                     ListPrice = 25,
                     Price = 23,
                     Price5 = 22,
-                    Price10 = 20
+                    Price10 = 20,
+                    CategoryId = 3,
+                    ImageUrl = ""
                 }
                 );
 
