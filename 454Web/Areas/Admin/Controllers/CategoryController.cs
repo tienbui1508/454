@@ -2,11 +2,14 @@
 using _454.DataAccess.Repository;
 using _454.DataAccess.Repository.IRepository;
 using _454.Models;
+using _454.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _454Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
