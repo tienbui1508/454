@@ -8,9 +8,11 @@ namespace _454.DataAccess.Repository.IRepository
 {
     public interface IUnitOfWork
     {
+        IShoppingCartRepository ShoppingCart { get; }
         ICategoryRepository Category { get; }
         IProductRepository Product { get; }
         ICompanyRepository Company { get; }
+        IApplicationUserRepository ApplicationUser { get; }
 
         void Save();
     }
