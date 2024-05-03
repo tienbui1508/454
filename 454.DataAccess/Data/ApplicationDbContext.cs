@@ -19,7 +19,11 @@ namespace _454.DataAccess.Data
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+		public DbSet<OrderHeader> OrderHeaders { get; set; }
+
+		public DbSet<OrderDetail> OrderDetails { get; set; }
+
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //code added to run Identity EF
             base.OnModelCreating(modelBuilder);
