@@ -1,5 +1,6 @@
 using _454.DataAccess.Repository.IRepository;
 using _454.Models;
+using _454.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -23,6 +24,7 @@ namespace _454Web.Areas.Customer.Controllers
 
         public IActionResult Index()
         {
+           
             IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category");
             return View(productList);
         }
@@ -50,16 +52,19 @@ namespace _454Web.Areas.Customer.Controllers
             if (cartFromDb != null)
             {
                 cartFromDb.Count += shoppingCart.Count;
+                _unitOfWork.Save();
+
                 _unitOfWork.ShoppingCart.Update(cartFromDb);
             }
             else
             {
                 _unitOfWork.ShoppingCart.Add(shoppingCart);
+                _unitOfWork.Save();
 
+                HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart.GetAll(u=>u.AppicationUserId == userId).Count());
             }
             TempData["success"] = "Cart updated successfully";
 
-            _unitOfWork.Save();
 
             return RedirectToAction(nameof(Index));
         }
