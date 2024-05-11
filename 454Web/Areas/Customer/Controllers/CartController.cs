@@ -127,8 +127,8 @@ namespace _454Web.Areas.Customer.Controllers
             {
                 //regular user, capture payment
                 //stripe logic
-                var domain = "https://localhost:7200/";
-				var options = new SessionCreateOptions
+                var domain = Request.Scheme + "://" + Request.Host.Value + "/";
+                var options = new SessionCreateOptions
 				{
                     
 					SuccessUrl = domain+$"customer/cart/OrderConfirmation?id={ShoppingCartVM.OrderHeader.Id}",
