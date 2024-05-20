@@ -17,7 +17,6 @@ namespace _454.Models
         [Required]
         public string Title { get; set; }
         [Required]
-        [DisplayName("Product Title")]
         [MaxLength(100)]
         public string Author { get; set; }
         public string Description { get; set; }
@@ -49,7 +48,8 @@ namespace _454.Models
 
         public Category Category { get; set; }
         [ValidateNever]
+        public List<ProductImage> ProductImages { get; set; }
 
-        public string ImageUrl { get; set; }
+
     }
 }

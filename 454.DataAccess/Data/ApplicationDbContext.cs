@@ -18,6 +18,7 @@ namespace _454.DataAccess.Data
         public DbSet<Company> Companies { get; set; }
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
 
 		public DbSet<OrderHeader> OrderHeaders { get; set; }
 
@@ -78,7 +79,7 @@ namespace _454.DataAccess.Data
                     Price5 = 85,
                     Price10 = 80,
                     CategoryId = 1,
-                    ImageUrl = ""
+                   
                 },
                 new Product
                 {
@@ -91,7 +92,7 @@ namespace _454.DataAccess.Data
                     Price5 = 25,
                     Price10 = 20,
                     CategoryId = 1,
-                    ImageUrl = ""
+                   
                 },
                 new Product
                 {
@@ -104,7 +105,7 @@ namespace _454.DataAccess.Data
                     Price5 = 40,
                     Price10 = 35,
                     CategoryId = 2,
-                    ImageUrl = ""
+                   
                 },
                 new Product
                 {
@@ -117,7 +118,7 @@ namespace _454.DataAccess.Data
                     Price5 = 60,
                     Price10 = 55,
                     CategoryId = 2,
-                    ImageUrl = ""
+                   
                 },
                 new Product
                 {
@@ -130,7 +131,7 @@ namespace _454.DataAccess.Data
                     Price5 = 25,
                     Price10 = 20,
                     CategoryId = 3,
-                    ImageUrl = ""
+                   
                 },
                 new Product
                 {
@@ -143,7 +144,7 @@ namespace _454.DataAccess.Data
                     Price5 = 22,
                     Price10 = 20,
                     CategoryId = 3,
-                    ImageUrl = ""
+                  
                 }
                 );
 

@@ -21,8 +21,9 @@ namespace _454.DataAccess.Repository
 		public IOrderHeaderRepository OrderHeader { get; private set; }
 		public IOrderDetailRepository OrderDetail { get; private set; }
 
+        public IProductImageRepository ProductImage { get; private set; }
 
-		public UnitOfWork(ApplicationDbContext db) 
+        public UnitOfWork(ApplicationDbContext db) 
         {
             _db = db;
             ApplicationUser = new ApplicationUserRepository(_db);
@@ -32,7 +33,7 @@ namespace _454.DataAccess.Repository
             Company = new CompanyRepository(_db);
 			OrderHeader = new OrderHeaderRepository(_db);
 			OrderDetail = new OrderDetailRepository(_db);
-
+            ProductImage = new ProductImageRepository(_db);
 		}
 
 
