@@ -11,7 +11,7 @@ function loadDataTable() {
             { data: 'name' },
             { data: 'email' },
             { data: 'phoneNumber' },
-            { data: 'company.name' },
+            { data: 'companyName' },
             { data: 'role' },
             {
                 data: { id: 'id', lockoutEnd: 'lockoutEnd' },
