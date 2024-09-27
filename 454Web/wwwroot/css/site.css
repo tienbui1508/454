@@ -545,3 +545,15 @@ bg-success {
         background-color: #578553;
         border-color: #578553;
     }
+
+
+.product-card {
+    height: 600px; /* Fixed height for the card */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.product-image {
+    width: 100%; /* Full width */
+    height: 500px; /* Fixed height */
+    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+}
